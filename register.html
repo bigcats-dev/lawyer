@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>House Project</title>
+    <link rel="icon" type="image/x-icon" href="images/law-logo.avif">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Sarabun:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+    <link href="css/login.css" rel="stylesheet" type="text/css" />
+ 
+</head>
+
+<body class="regis">
+    <div class="container d-flex align-items-center justify-content-center h-100">
+        <div class="col-md-6 form-container">
+            <h2 class="mb-4 text-center">สมัครสมาชิกเอเจนต์</h2>
+            <form id="signupForm" action="role-agent-dashboard.html">
+                <div class="mb-3">
+                    <label for="firstName" class="form-label">ชื่อ</label>
+                    <input type="text" class="form-control" id="firstName" placeholder="ชื่อ" required>
+                </div>
+                <div class="mb-3">
+                    <label for="lastName" class="form-label">นามสกุล</label>
+                    <input type="text" class="form-control" id="lastName" placeholder="นามสกุล" required>
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label">อีเมล</label>
+                    <input type="email" class="form-control" id="email" placeholder="agent@example.com" required>
+                </div>
+                <div class="mb-3">
+                    <label for="phone" class="form-label">เบอร์โทรศัพท์</label>
+                    <input type="tel" class="form-control" id="phone" placeholder="+66 88 888 8888">
+                </div> 
+                <div class="mb-3">
+                    <label for="password" class="form-label">Password</label>
+                    <input type="password" class="form-control" id="password" placeholder="********" required>
+                </div>
+                <div class="mb-3">
+                    <label for="confirmPassword" class="form-label">Confirm Password</label>
+                    <input type="password" class="form-control" id="confirmPassword" placeholder="********" required>
+                </div>
+                <div class="d-grid gap-2">
+                    <button type="submit" class="btn btn btn-primary">Create Account</button>
+                </div>
+                <div class="text-center mt-3">
+                    <small>มีบัญชีแล้ว? <a href="login.html" class="text-warning">เข้าสู่ระบบ</a></small>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('signupForm').addEventListener('submit', function (e) {
+            e.preventDefault(); 
+            const password = document.getElementById('password').value;
+            const confirmPassword = document.getElementById('confirmPassword').value;
+
+            if (password.length < 8) {
+                alert('🚫 Password must be at least 8 characters.');
+                return;
+            } 
+            if (password !== confirmPassword) {
+                alert('🚫 Passwords do not match.');
+                return;
+            } 
+            alert('✅ Registration successful!');
+            this.submit(); 
+        });
+    </script>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

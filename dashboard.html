@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>ระบบสำนวนคดี</title>
+        <link rel="icon" type="image/x-icon" href="images/law-logo.avif">
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="css/bootstrap-datepicker.min.css"/>
+        <link href="css/select2.min.css" rel="stylesheet" />
+        <link rel="stylesheet" href="css/select2-bootstrap-5-theme.min.css" />
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Sarabun:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0" />
+        <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"/>   
+        <link href="css/style.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <div class="menu-mb">
+            <div class="top">
+                <img src="images/logo.png" alt="" class="menux-close">
+                <img src="images/logo.png" alt="" class="menux-logo">
+            </div>
+            <div class="user"> 
+                <div class="avatarx">
+                    <img src="images/3_avatar-512.webp" alt="" class="">
+                    <h6>User Name</h6>
+                </div>
+                <div class="dropdown user-dropdown">
+                    <a href="#" class="dropdown-toggle" data-bs-toggle="dropdown">
+                    <span class="material-symbols-outlined more-vert">
+                    more_vert
+                    </span>
+                    </a>
+                    <div class="dropdown-menu">
+                        <a href="#" class="dropdown-item">My profile</a>
+                        <a href="#" class="dropdown-item">Settings</a>
+                        <a href="login.html" class="dropdown-item">Logout</a> 
+                    </div>
+                </div>
+            </div>
+            <div class="menu">
+                <ul>
+                    <li class="active">
+                        <a href="#"> 
+                        <i>Dashboard</i>
+                        <span class="material-symbols-rounded">
+                        dashboard
+                        </span>
+                        </a>
+                    </li>
+                    <li class="sub">
+                        <div> 
+                            <i>Menu</i>
+                            <span class="material-symbols-rounded">
+                            group
+                            </span>
+                        </div>
+                        <ul>
+                            <li class="active"><a href="#">Sub menu 1</a></li>
+                            <li><a href="#">Sub menu 2</a></li>
+                            <li><a href="#">Sub menu 3</a></li>
+                            <li><a href="#">Sub menu 4</a></li>
+                        </ul>
+                    </li> 
+                </ul>
+            </div>
+        </div>
+        <div class="backdp"></div>
+        <div class="menu"> 
+            <div class="logo-expand">
+                <a href="#">
+                <img src="images/logo.png" alt="logo">
+                </a>
+            </div>
+            <h3>ระบบสำนวนคดี</h3>
+            <div class="menu-dib" id="menu-container"></div>
+        </div>
+        <div id="nav-top-placeholder"></div>
+        <main>
+            <div class="container-fluid p-0 dashboardxm d-none">
+                <div class="navi-map">
+                    <span>Home</span>
+                    <span>/</span>
+                    <a href="#">Dashboard</a>
+                </div> 
+
+                <div class="row g-4 mb-3">
+                    <div class="col-lg-3">
+                        <div class="summary-card">
+                            <i class="fas fa-list"></i>
+                            <div>
+                                <div class="fw-semibold fs-5">142 รายการ</div>
+                                <div class="text-muted">คดีทั้งหมด</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="summary-card">
+                            <i class="fas fa-hourglass-end"></i>
+                            <div>
+                                <div class="fw-semibold fs-5">12 รายการ</div>
+                                <div class="text-muted">คดีใหม่</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="summary-card">
+                            <i class="fas fa-hourglass-end"></i>
+                            <div>
+                                <div class="fw-semibold fs-5">52 รายการ</div>
+                                <div class="text-muted">อยู่ระหว่างพิจารณา</div>
+                            </div>
+                        </div>
+                    </div> 
+                    <div class="col-lg-3">
+                        <div class="summary-card">
+                            <i class="fas fa-gavel"></i>
+                            <div>
+                                <div class="fw-semibold fs-5">15 รายการ</div>
+                                <div class="text-muted">สิ้นสุดคดี</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>  
+            </div>
+            <div class="container-fluid p-0">
+                <div class="row g-4 mb-3">
+                    <h4>ระบบตรวจสอบผลหมาย</h4>
+                    <div class="col-lg-6 mt-1 text-center">
+                        <div class="external-link">
+                            <h4>ระบบตรวจสอบผลหมาย</h4>
+                            <p>ตรวจสอบผลหมายและความคืบหน้าของคดีจากศาลยุติธรรม</p>
+                            <a href="https://cios.coj.go.th/tracking/index.html" target="_blank" class="btn btn-primary"><i class="far fa-external-link"></i> เข้าสู่ระบบตรวจสอบผลหมาย</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 mt-1 text-center">
+                        <div class="external-link">
+                            <h4>รวมเว็บไซต์ศาลยุติธรรม</h4>
+                            <p>ตรวจสอบผลหมายและความคืบหน้าของคดีจากศาลยุติธรรม</p>
+                            <a href="https://www.coj.go.th/th/content/category/detail/id/6/iid/121186" target="_blank" class="btn btn-purple"><i class="far fa-external-link"></i> เข้าสู่ระบบตรวจสอบผลหมาย</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container-fluid p-0">
+                <div class="row g-4 mb-3">
+                    <h4>ระบบ EFiling</h4>
+                    <div class="col-lg-6 mt-1 text-center">
+                        <div class="external-link">
+                            <h4>ระบบ EFiling ศาลยุติธรรม</h4>
+                            <p>ยื่นคำร้อง คำฟ้อง และเอกสารต่างๆ ผ่านระบบออนไลน์</p>
+                            <a href="https://efiling3.coj.go.th/eFiling/#/login" target="_blank" class="btn btn-primary">
+                                <i class="far fa-external-link"></i> เข้าสู่ ระบบ EFiling ศาลยุติธรรม
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 mt-1 text-center">
+                        <div class="external-link">
+                            <h4>ระบบ EFiling บังคับคดี</h4>
+                            <p>ยื่นคำร้องและเอกสารเกี่ยวกับบังคับคดี</p>
+                            <a href="https://www.led.go.th/th/efiling/" target="_blank" class="btn btn-purple">
+                                <i class="far fa-external-link"></i> เข้าสู่ ระบบ EFiling บังคับคดี
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container-fluid p-0">
+                <div class="row g-4 mb-3">
+                    <h4>ประมวลกฎหมาย</h4>
+                    <div class="col-lg-3 mt-1 text-center">
+                        <div class="external-link">
+                            <h4>ค้นหากฎหมาย</h4>
+                            <p>ค้นหากฎหมาย พระราชบัญญัติ และกฏระเบียบต่างๆ</p>
+                            <a href="https://krisdika.ocs.go.th/law" target="_blank" class="btn btn-primary">
+                                <i class="far fa-external-link"></i> ค้นหากฎหมาย
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 mt-1 text-center">
+                        <div class="external-link">
+                            <h4>กฎหมายแพ่งและพาณิชย์</h4>
+                            <p>ประมวลกฎหมายแพ่งและพาณิชย์ ฉบับปัจจุบัน</p>
+                            <a href="https://krisdika.ocs.go.th/law" target="_blank" class="btn btn-danger">
+                                <i class="far fa-external-link"></i> เปิดกฎหมายแพ่งและพาณิชย์
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 mt-1 text-center">
+                        <div class="external-link">
+                            <h4>กฎหมายอาญา</h4>
+                            <p>ประมวลกฎหมายอาญา ฉบับปัจจุบัน</p>
+                            <a href="https://krisdika.ocs.go.th/law" target="_blank" class="btn btn-success">
+                                <i class="far fa-external-link"></i> เปิดกฎหมายอาญา
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 mt-1 text-center">
+                        <div class="external-link">
+                            <h4>กฎหมายวิธีพิจารณาความแพ่ง</h4>
+                            <p>ประมวลกฎหมายวิธีพิจารณาความแพ่ง ฉบับปัจจุบัน</p>
+                            <a href="https://krisdika.ocs.go.th/law" target="_blank" class="btn btn-warning">
+                                <i class="far fa-external-link"></i> เปิดกฎหมายวิธีพิจารณาความแพ่ง
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container-fluid p-0">
+                <div class="row g-4 mb-3">
+                    <h4>ค้นหาฎีกา</h4>
+                    <div class="col-lg-12 mt-1 text-center">
+                        <div class="external-link">
+                            <h4>ระบบค้นหาฎีกา</h4>
+                            <p>ค้นหาฎีกา</p>
+                            <a href="https://deka.supremecourt.or.th/" target="_blank" class="btn btn-purple">
+                                <i class="far fa-external-link"></i> ค้นหากฎหมาย
+                            </a>
+                        </div>
+                    </div> 
+                </div>
+            </div>
+        </main>
+
+        <script src="js/jquery.slim.min.js"></script> 
+        <script src="js/jquery.min.js"></script>
+        <script src="js/popper.min.js" ></script>
+        <script src="js/bootstrap.bundle.min.js"></script>
+        <script src="js/select2.min.js"></script>
+        <script src="js/bootstrap-datepicker.min.js"></script>
+        <script src="js/bootstrap-datepicker.th.min.js"></script>   
+        <script src="js/apexcharts.js"></script>
+        <script src="js/chart.js"></script>
+        <script src="js/menu.js"></script>
+        <script src="js/navTop.js"></script>
+        <script>
+            $(document).ready(function() {
+            	$( '.form-select' ).select2( {
+            		theme: "bootstrap-5"
+            	} ); 
+            });
+            $('.menu ul li.sub').click(function(){      
+            	$(this).toggleClass("active");   
+            	$("body").removeClass("expand");  
+            }); 
+            $('.menu-expand').click(function(){     
+            	$("body").toggleClass("expand");  
+            }); 
+            
+            $('.menux').click(function(){     
+            	$(".menu-mb").addClass("active");
+            	$("body").addClass("active");      
+            	$('.menu-mb').animate({'left': '0'}, 600);
+            }); 
+            $('.backdp').click(function(){     
+            	$(".menu-mb").removeClass("active");  
+            	$("body").removeClass("active");    
+            	$('.menu-mb').animate({'left': '-120%'}, 300); 
+            }); 
+            $('.menux-close').click(function(){    
+            	$(".menu-mb").removeClass("active");  
+            	$("body").removeClass("active");    
+            	$('.menu-mb').animate({'left': '-120%'}, 300); 
+            });
+            
+            
+            
+        </script>
+    </body>
+</html>

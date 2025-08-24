@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>ระบบสำนวนคดี</title>
+        <link rel="icon" type="image/x-icon" href="images/law-logo.avif">
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="css/bootstrap-datepicker.min.css"/>
+        <link href="css/select2.min.css" rel="stylesheet" />
+        <link rel="stylesheet" href="css/select2-bootstrap-5-theme.min.css" />
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Sarabun:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0" />
+        <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"/>   
+        <link href="css/style.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <div class="menu-mb">
+            <div class="top">
+                <img src="images/logo.png" alt="" class="menux-close">
+                <img src="images/logo.png" alt="" class="menux-logo">
+            </div>
+            <div class="user"> 
+                <div class="avatarx">
+                    <img src="images/3_avatar-512.webp" alt="" class="">
+                    <h6>User Name</h6>
+                </div>
+                <div class="dropdown user-dropdown">
+                    <a href="#" class="dropdown-toggle" data-bs-toggle="dropdown">
+                    <span class="material-symbols-outlined more-vert">
+                    more_vert
+                    </span>
+                    </a>
+                    <div class="dropdown-menu">
+                        <a href="#" class="dropdown-item">My profile</a>
+                        <a href="#" class="dropdown-item">Settings</a>
+                        <a href="login.html" class="dropdown-item">Logout</a> 
+                    </div>
+                </div>
+            </div>
+            <div class="menu">
+                <ul>
+                    <li class="active">
+                        <a href="#"> 
+                        <i>Dashboard</i>
+                        <span class="material-symbols-rounded">
+                        dashboard
+                        </span>
+                        </a>
+                    </li>
+                    <li class="sub">
+                        <div> 
+                            <i>Menu</i>
+                            <span class="material-symbols-rounded">
+                            group
+                            </span>
+                        </div>
+                        <ul>
+                            <li class="active"><a href="#">Sub menu 1</a></li>
+                            <li><a href="#">Sub menu 2</a></li>
+                            <li><a href="#">Sub menu 3</a></li>
+                            <li><a href="#">Sub menu 4</a></li>
+                        </ul>
+                    </li> 
+                </ul>
+            </div>
+        </div>
+        <div class="backdp"></div>
+        <div class="menu"> 
+            <div class="logo-expand">
+                <a href="#">
+                <img src="images/logo.png" alt="logo">
+                </a>
+            </div>
+            <h3>ระบบสำนวนคดี</h3>
+            <div class="menu-dib" id="menu-container"></div>
+        </div>
+        <div id="nav-top-placeholder"></div> 
+        <main>
+            <div class="container-fluid p-0">
+                <div class="navi-map">
+                    <span>Home</span>
+                    <span>/</span>
+                    <a href="#">External Link</a>
+                </div> 
+
+                <div class="container-fluid">
+                    <div class="row mb-3">
+                        <div class="col-lg-6">
+                            <h2 class="mb-4">รายการคดี</h2>
+                        </div>
+                        <div class="col-lg-6 text-end">
+                            <a href="law-create.html" class="btn btn-success"><i class="fas fa-plus"></i> เพิ่มคดีใหม่</a>
+                        </div>
+                    </div>
+                    
+                    <div class="row mb-3">
+                        <div class="col-md-3">
+                            <input type="text" class="form-control" placeholder="ชื่อ">
+                        </div>
+                        <div class="col-md-3">
+                            <select class="form-select">
+                                <option selected>ประเภท</option>
+                                <option>ระบบตรวจสอบผลหมาย</option>
+                                <option>ระบบ EFiling</option>
+                                <option>ประมวลกฎหมาย</option>
+                                <option>ค้นหาฎีกา</option>
+                            </select>
+                        </div> 
+                    </div>
+                    <div class="table-responsive tb-box">
+                        <table class="table table1">
+                            <thead class="table-dark">
+                                <tr>
+                                    <th>#</th>
+                                    <th>ชื่อ Link</th> 
+                                    <th>URL</th> 
+                                    <th>ประเภท</th> 
+                                    <th>การใช้งาน</th>
+                                    <th class="text-center">การจัดการ</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td> 
+                                    <td>ระบบตรวจสอบผลหมาย</td>
+                                    <td><a href="https://cios.coj.go.th/tracking/index.html" target="_blank">https://cios.coj.go.th/tracking/index.html</a></td>
+                                    <td>ระบบตรวจสอบผลหมาย</td> 
+                                    <td>
+                                        <div class="form-check form-switch">
+                                            <input class="form-check-input" type="checkbox" id="switch1" checked>
+                                            <label class="form-check-label" for="switch1"></label>
+                                        </div>
+                                    </td>
+                                    <td class="text-center">
+                                        <a class="btn btn-primary btn-sm text-white" href="external-link-edit.html">  
+                                            ดูรายละเอียด
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>2</td> 
+                                    <td>กฎหมายแพ่งและพาณิชย์</td>
+                                    <td><a href="https://krisdika.ocs.go.th/law" target="_blank">https://krisdika.ocs.go.th/law</a></td>
+                                    <td>ประมวลกฎหมาย</td> 
+                                    <td>
+                                        <div class="form-check form-switch">
+                                            <input class="form-check-input" type="checkbox" id="switch2" checked>
+                                            <label class="form-check-label" for="switch2"></label>
+                                        </div>
+                                    </td>
+                                    <td class="text-center">
+                                        <a class="btn btn-primary btn-sm text-white" href="external-link-edit.html">  
+                                            ดูรายละเอียด
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>3</td> 
+                                    <td>กฎหมายอาญา</td>
+                                    <td><a href="https://krisdika.ocs.go.th/law" target="_blank">https://krisdika.ocs.go.th/law</a></td>
+                                    <td>ประมวลกฎหมาย</td> 
+                                    <td>
+                                        <div class="form-check form-switch">
+                                            <input class="form-check-input" type="checkbox" id="switch3" checked>
+                                            <label class="form-check-label" for="switch3"></label>
+                                        </div>
+                                    </td>
+                                    <td class="text-center">
+                                        <a class="btn btn-primary btn-sm text-white" href="external-link-edit.html">  
+                                            ดูรายละเอียด
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>4</td> 
+                                    <td>กฎหมายวิธีพิจารณาความแพ่ง</td>
+                                    <td><a href="https://krisdika.ocs.go.th/law" target="_blank">https://krisdika.ocs.go.th/law</a></td>
+                                    <td>ประมวลกฎหมาย</td> 
+                                    <td>
+                                        <div class="form-check form-switch">
+                                            <input class="form-check-input" type="checkbox" id="switch4" checked>
+                                            <label class="form-check-label" for="switch4"></label>
+                                        </div>
+                                    </td>
+                                    <td class="text-center">
+                                        <a class="btn btn-primary btn-sm text-white" href="external-link-edit.html">  
+                                            ดูรายละเอียด
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>5</td> 
+                                    <td>ค้นหาฎีกา</td>
+                                    <td><a href="https://deka.supremecourt.or.th/" target="_blank">https://deka.supremecourt.or.th/</a></td>
+                                    <td>ค้นหาฎีกา</td> 
+                                    <td>
+                                        <div class="form-check form-switch">
+                                            <input class="form-check-input" type="checkbox" id="switch5" checked>
+                                            <label class="form-check-label" for="switch5"></label>
+                                        </div>
+                                    </td>
+                                    <td class="text-center">
+                                        <a class="btn btn-primary btn-sm text-white" href="external-link-edit.html">  
+                                            ดูรายละเอียด
+                                        </a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                    </div>
+
+                </div>
+            </div>
+        </main>
+
+        <script src="js/jquery.slim.min.js"></script> 
+        <script src="js/jquery.min.js"></script>
+        <script src="js/popper.min.js" ></script>
+        <script src="js/bootstrap.bundle.min.js"></script>
+        <script src="js/select2.min.js"></script>
+        <script src="js/bootstrap-datepicker.min.js"></script>
+        <script src="js/bootstrap-datepicker.th.min.js"></script>   
+        <script src="js/apexcharts.js"></script>
+        <script src="js/chart.js"></script>
+        <script src="js/menu.js"></script>
+        <script src="js/navTop.js"></script>
+        <script>
+            $(document).ready(function() {
+            	$( '.form-select' ).select2( {
+            		theme: "bootstrap-5"
+            	} ); 
+            });
+            $('.menu ul li.sub').click(function(){      
+            	$(this).toggleClass("active");   
+            	$("body").removeClass("expand");  
+            }); 
+            $('.menu-expand').click(function(){     
+            	$("body").toggleClass("expand");  
+            }); 
+            
+            $('.menux').click(function(){     
+            	$(".menu-mb").addClass("active");
+            	$("body").addClass("active");      
+            	$('.menu-mb').animate({'left': '0'}, 600);
+            }); 
+            $('.backdp').click(function(){     
+            	$(".menu-mb").removeClass("active");  
+            	$("body").removeClass("active");    
+            	$('.menu-mb').animate({'left': '-120%'}, 300); 
+            }); 
+            $('.menux-close').click(function(){    
+            	$(".menu-mb").removeClass("active");  
+            	$("body").removeClass("active");    
+            	$('.menu-mb').animate({'left': '-120%'}, 300); 
+            });
+            
+            
+            
+        </script>
+    </body>
+</html>
