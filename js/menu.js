@@ -30,16 +30,18 @@ function renderAdminMenu() {
                 <span class="material-symbols-outlined">calendar_month</span>
                 </a>
             </li>  
-            <li class="sub ${['external-link.html','external-type.html'].includes(currentPage) ? 'active open' : ''}">
+            <li class="sub ${['external-link.html','external-type.html','notifications.html','notifications-type.html','case-type.html','court-name.html'].includes(currentPage) ? 'active open' : ''}">
                 <div> 
                     <i>ตั้งค่าระบบ</i>
                     <span class="material-symbols-rounded">manage_accounts</span>
                 </div>
-                <ul>
-                    <li><a href="#" >ประเภทคดี</a></li> 
-                    <li><a href="#" >ชื่อศาล</a></li>
+                <ul> 
+                    <li class="${currentPage === 'case-type.html' ? 'active' : ''}"><a href="case-type.html" >ประเภทคดี</a></li> 
+                    <li class="${currentPage === 'court-name.html' ? 'active' : ''}"><a href="court-name.html" >ชื่อศาล</a></li>
                     <li class="${currentPage === 'external-link.html' ? 'active' : ''}"><a href="external-link.html" >จัดการ External Link</a></li> 
                     <li class="${currentPage === 'external-type.html' ? 'active' : ''}"><a href="external-type.html" >ประเภท External Link</a></li>
+                    <li class="${currentPage === 'notifications.html' ? 'active' : ''}"><a href="notifications.html" >ตั้งค่าการแจ้งเตือน</a></li> 
+                    <li class="${currentPage === 'notifications-type.html' ? 'active' : ''}"><a href="notifications-type.html" >รูปแบบการแจ้งเตือน</a></li>
                 </ul>
             </li>
         </ul>
