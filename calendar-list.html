@@ -101,13 +101,82 @@
                     
                     <div class="row mb-3 justify-content-center">
                         <div class="col-11">
-                            <div id="calendar"></div>
+                            <div class="card shadow-sm rounded-4 p-3">
+                                <div class="card-header bg-primary text-white rounded-3 mb-3">
+                                    <h5 class="mb-0"><i class="fas fa-calendar-alt me-2"></i>ปฏิทินกิจกรรม</h5>
+                                </div>
+                                <div id="calendar" class="p-2"></div>
+                            </div>
                         </div>
+
                     </div> 
+
 
                 </div>
             </div>
         </main>
+
+        <style>
+            /* FullCalendar ปรับสวยแบบมินิมอล */
+            #calendar {
+                background-color: #fff;
+                border-radius: 12px;
+                padding: 10px;
+            }
+
+            .fc {
+                font-family: 'Sarabun', sans-serif;
+            }
+
+            .fc .fc-toolbar-title {
+                font-size: 1.4rem;
+                font-weight: 600;
+            }
+
+            .fc .fc-daygrid-event {
+                border-radius: 8px;
+                padding: 3px 5px;
+                font-size: 0.9rem;
+                color: #fff;
+            }
+
+            .fc-event.fc-event-primary {
+                background-color: #0d6efd;
+                border: none;
+            }
+
+            .fc-event.fc-event-success {
+                background-color: #198754;
+                border: none;
+            }
+
+            .fc-event.fc-event-warning {
+                background-color: #ffc107;
+                color: #000;
+                border: none;
+            }
+
+            .fc .fc-daygrid-day:hover {
+                background-color: #f8f9fa;
+                cursor: pointer;
+            }
+
+            /* เพิ่มเงาให้ตารางวันที่ */
+            .fc-daygrid-day-top {
+                position: relative;
+            }
+
+            .fc-daygrid-day-top::after {
+                content: '';
+                position: absolute;
+                bottom: 0;
+                left: 5%;
+                width: 90%;
+                height: 1px;
+                background-color: #dee2e6;
+            }
+
+        </style>
 
         <script src="js/jquery.slim.min.js"></script> 
         <script src="js/jquery.min.js"></script>
@@ -164,31 +233,33 @@
         </script>
         <script>
             document.addEventListener('DOMContentLoaded', function() {
-            var calendarEl = document.getElementById('calendar');
-            var calendar = new FullCalendar.Calendar(calendarEl, {
-                initialView: 'dayGridMonth',
-                locale: 'th',  // ภาษาไทย
-                themeSystem: 'bootstrap5',
-                headerToolbar: {
-                left: 'prev,next today',
-                center: 'title',
-                right: 'dayGridMonth,timeGridWeek,timeGridDay,listMonth'
-                },
-                events: [
-                {
-                    title: 'ประชุมทีม',
-                    start: '2025-08-24T10:00:00',
-                    end: '2025-08-24T12:00:00'
-                },
-                {
-                    title: 'วันหยุดราชการ',
-                    start: '2025-08-28',
-                    allDay: true
-                }
-                ]
-            });
-            calendar.render();
-            });
+                var calendarEl = document.getElementById('calendar');
+                var calendar = new FullCalendar.Calendar(calendarEl, {
+                    initialView: 'dayGridMonth',
+                    locale: 'th',  // ภาษาไทย
+                    themeSystem: 'bootstrap5',
+                    headerToolbar: {
+                    left: 'prev,next today',
+                    center: 'title',
+                    right: 'dayGridMonth,timeGridWeek,timeGridDay,listMonth'
+                    },
+                    events: [
+                        {
+                            title: 'ประชุมทีม',
+                            start: '2025-08-24T10:00:00',
+                            end: '2025-08-24T12:00:00',
+                            classNames: ['fc-event-primary']
+                        },
+                        {
+                            title: 'วันหยุดราชการ',
+                            start: '2025-08-28',
+                            allDay: true,
+                            classNames: ['fc-event-success']
+                        }
+                    ]
+                });
+                calendar.render();
+                });
             </script>
 
     </body>
