@@ -133,19 +133,19 @@
                     <div class="col-12">
                         <div class="card p-3">
                             <h6>คดีล่าสุด</h6>
-                            <div class="table-responsive tb-box">
+                            <div class="table-responsive  ">
                                 <table class="table table-striped align-middle table-hover shadow-sm rounded-4">
-                                    <thead class="table-dark text-center">
+                                    <thead class="table-dark  ">
                                         <tr>
-                                            <th>#</th>
+                                            <th class="text-center">#</th>
                                             <th>เลขคดี</th>
                                             <th>ประเภทคดี</th>
                                             <th>โจทก์</th>
                                             <th>จำเลย</th>
                                             <th>เรื่อง</th>
-                                            <th>สถานะ</th>
-                                            <th>นัดถัดไป</th>
-                                            <th>การจัดการ</th>
+                                            <th class="text-center">สถานะ</th>
+                                            <th class="text-center">นัดถัดไป</th>
+                                            <th class="text-center">การจัดการ</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -161,9 +161,9 @@
                                             </td>
                                             <td class="text-center">24/08/2565 10:00</td>
                                             <td class="text-center">
-                                                <a class="btn btn-sm btn-primary text-white" href="case-view.html">
-                                                    <i class="fas fa-eye me-1"></i> ดูรายละเอียด
-                                                </a>
+                                                <button type="button" class="btn btn-sm btn-primary text-white" data-bs-toggle="modal" data-bs-target="#caseDetailModal1">
+                                                    <i class="fas fa-eye me-1"></i> 
+                                                </button>
                                             </td>
                                         </tr>
                                         <tr>
@@ -178,9 +178,9 @@
                                             </td>
                                             <td class="text-center">28/08/2565 13:00</td>
                                             <td class="text-center">
-                                                <a class="btn btn-sm btn-primary text-white" href="case-view.html">
-                                                    <i class="fas fa-eye me-1"></i> ดูรายละเอียด
-                                                </a>
+                                                <button type="button" class="btn btn-sm btn-primary text-white" data-bs-toggle="modal" data-bs-target="#caseDetailModal1">
+                                                    <i class="fas fa-eye me-1"></i> 
+                                                </button>
                                             </td>
                                         </tr>
                                         <tr>
@@ -195,9 +195,9 @@
                                             </td>
                                             <td class="text-center">30/08/2565 09:00</td>
                                             <td class="text-center">
-                                                <a class="btn btn-sm btn-primary text-white" href="case-view.html">
-                                                    <i class="fas fa-eye me-1"></i> ดูรายละเอียด
-                                                </a>
+                                                <button type="button" class="btn btn-sm btn-primary text-white" data-bs-toggle="modal" data-bs-target="#caseDetailModal1">
+                                                    <i class="fas fa-eye me-1"></i> 
+                                                </button>
                                             </td>
                                         </tr>
                                         <tr>
@@ -212,9 +212,9 @@
                                             </td>
                                             <td class="text-center">-</td>
                                             <td class="text-center">
-                                                <a class="btn btn-sm btn-primary text-white" href="case-view.html">
-                                                    <i class="fas fa-eye me-1"></i> ดูรายละเอียด
-                                                </a>
+                                                <button type="button" class="btn btn-sm btn-primary text-white" data-bs-toggle="modal" data-bs-target="#caseDetailModal1">
+                                                    <i class="fas fa-eye me-1"></i> 
+                                                </button>
                                             </td>
                                         </tr>
                                     </tbody>
@@ -242,6 +242,83 @@
  
             </div>
         </main>
+
+        <!-- Modal -->
+        <div class="modal fade" id="caseDetailModal1" tabindex="-1" aria-labelledby="caseDetailModalLabel1" aria-hidden="true">
+            <div class="modal-dialog modal-lg modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header bg-primary text-white">
+                        <h5 class="modal-title" id="caseDetailModalLabel1">รายละเอียดคดี 001/2568</h5>
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <table class="table table-borderless">
+                            <tr>
+                                <th>เลขคดี:</th>
+                                <td>001/2568</td>
+                                <th>ประเภทคดี:</th>
+                                <td>อาญา</td>
+                            </tr>
+                            <tr>
+                                <th>โจทก์:</th>
+                                <td>นาย กิตติ</td>
+                                <th>จำเลย:</th>
+                                <td>นาย ขจร</td>
+                            </tr>
+                            <tr>
+                                <th>เรื่อง:</th>
+                                <td colspan="3">ทำร้ายร่างกาย</td>
+                            </tr>
+                            <tr>
+                                <th>สถานะ:</th>
+                                <td><span class="badge bg-warning text-dark">สอบสวน</span></td>
+                                <th>นัดถัดไป:</th>
+                                <td>24/08/2565 10:00</td>
+                            </tr>
+                            <tr>
+                                <th>รายละเอียดเพิ่มเติม:</th>
+                                <td colspan="3">
+                                    - รายละเอียดเหตุการณ์<br>
+                                    - เอกสารแนบ<br>
+                                    - ผู้เกี่ยวข้อง
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">ปิด</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <style>
+            .table-hover tbody tr:hover {
+                background-color: #f2f6ff;
+                transition: 0.3s;
+            }
+
+            .tb-box {
+                background-color: #fff;
+                padding: 15px;
+                border-radius: 12px;
+                box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+            }
+
+            .badge {
+                font-size: 0.85rem;
+                padding: 0.5em 0.8em;
+            }
+
+            .table thead th:first-child{
+                border-top-left-radius: 12px; 
+            }
+
+            .table thead th:last-child{
+                border-top-right-radius: 12px; 
+            }
+
+        </style>
 
         <script src="js/jquery.slim.min.js"></script> 
         <script src="js/jquery.min.js"></script>

@@ -2719,10 +2719,10 @@ ol, ul {
   border-radius: 999px;
   padding: 0.6rem 1.2rem;
 }
-.dashboardxm .table > :not(caption) > * > * {
+/* .dashboardxm .table > :not(caption) > * > * {
   background-color: transparent !important;
   border-bottom: 1px solid #eee;
-}
+} */
 .des-property .card {
   border: none;
   border-radius: 1rem;
