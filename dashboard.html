@@ -133,34 +133,89 @@
                     <div class="col-12">
                         <div class="card p-3">
                             <h6>คดีล่าสุด</h6>
-                            <div class="table-responsive">
-                                <table class="table table-striped">
-                                    <thead>
+                            <div class="table-responsive tb-box">
+                                <table class="table table-striped align-middle table-hover shadow-sm rounded-4">
+                                    <thead class="table-dark text-center">
                                         <tr>
-                                            <th>หมายเลขคดี</th>
-                                            <th>คู่กรณี</th>
+                                            <th>#</th>
+                                            <th>เลขคดี</th>
                                             <th>ประเภทคดี</th>
+                                            <th>โจทก์</th>
+                                            <th>จำเลย</th>
+                                            <th>เรื่อง</th>
                                             <th>สถานะ</th>
-                                            <th>นัดครั้งต่อไป</th>
-                                            <th>Action</th>
+                                            <th>นัดถัดไป</th>
+                                            <th>การจัดการ</th>
                                         </tr>
                                     </thead>
                                     <tbody>
                                         <tr>
-                                            <td>001/2566</td>
-                                            <td>นาย ก / นาง ข</td>
-                                            <td>แพ่ง</td>
-                                            <td>กำลังดำเนิน</td>
-                                            <td>27/08/2568</td>
-                                            <td><button class="btn btn-sm btn-primary">ดูรายละเอียด</button></td>
+                                            <td class="text-center">1</td>
+                                            <td>001/2568</td>
+                                            <td>อาญา</td>
+                                            <td>นาย กิตติ</td>
+                                            <td>นาย ขจร</td>
+                                            <td>ทำร้ายร่างกาย</td>
+                                            <td class="text-center">
+                                                <span class="badge bg-warning text-dark">สอบสวน</span>
+                                            </td>
+                                            <td class="text-center">24/08/2565 10:00</td>
+                                            <td class="text-center">
+                                                <a class="btn btn-sm btn-primary text-white" href="case-view.html">
+                                                    <i class="fas fa-eye me-1"></i> ดูรายละเอียด
+                                                </a>
+                                            </td>
                                         </tr>
                                         <tr>
-                                            <td>002/2566</td>
-                                            <td>บริษัท A / B</td>
+                                            <td class="text-center">2</td>
+                                            <td>002/2568</td>
+                                            <td>แพ่ง</td>
+                                            <td>บริษัท A</td>
+                                            <td>นาย คม</td>
+                                            <td>ผิดสัญญาเช่า</td>
+                                            <td class="text-center">
+                                                <span class="badge bg-info text-dark">พิจารณาคดี</span>
+                                            </td>
+                                            <td class="text-center">28/08/2565 13:00</td>
+                                            <td class="text-center">
+                                                <a class="btn btn-sm btn-primary text-white" href="case-view.html">
+                                                    <i class="fas fa-eye me-1"></i> ดูรายละเอียด
+                                                </a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-center">3</td>
+                                            <td>003/2568</td>
                                             <td>อาญา</td>
-                                            <td>รอพิจารณา</td>
-                                            <td>29/08/2568</td>
-                                            <td><button class="btn btn-sm btn-primary">ดูรายละเอียด</button></td>
+                                            <td>อัยการ</td>
+                                            <td>นาย เดชา</td>
+                                            <td>ยาเสพติด</td>
+                                            <td class="text-center">
+                                                <span class="badge bg-success">ตัดสินคดี</span>
+                                            </td>
+                                            <td class="text-center">30/08/2565 09:00</td>
+                                            <td class="text-center">
+                                                <a class="btn btn-sm btn-primary text-white" href="case-view.html">
+                                                    <i class="fas fa-eye me-1"></i> ดูรายละเอียด
+                                                </a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-center">4</td>
+                                            <td>004/2568</td>
+                                            <td>แพ่ง</td>
+                                            <td>นางสาว พิมพ์</td>
+                                            <td>บริษัท B</td>
+                                            <td>ละเมิดลิขสิทธิ์</td>
+                                            <td class="text-center">
+                                                <span class="badge bg-danger">สิ้นสุดคดี</span>
+                                            </td>
+                                            <td class="text-center">-</td>
+                                            <td class="text-center">
+                                                <a class="btn btn-sm btn-primary text-white" href="case-view.html">
+                                                    <i class="fas fa-eye me-1"></i> ดูรายละเอียด
+                                                </a>
+                                            </td>
                                         </tr>
                                     </tbody>
                                 </table>
