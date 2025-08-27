@@ -18,6 +18,12 @@ function renderAdminMenu() {
                 <span class="material-symbols-outlined">gavel</span>
                 </a>
             </li> 
+            <li class="${currentPage === 'link.html' ? 'active' : ''}">
+                <a href="link.html"> 
+                <i>Link ที่เกี่ยวข้อง</i>
+                <span class="material-symbols-outlined">open_in_new</span>
+                </a>
+            </li> 
             <li class="${currentPage === 'calendar-list.html' ? 'active' : ''}">
                 <a href="calendar-list.html"> 
                 <i>ปฏิทิน</i>
