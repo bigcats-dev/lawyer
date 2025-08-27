@@ -36,10 +36,10 @@ function renderAdminMenu() {
                     <span class="material-symbols-rounded">manage_accounts</span>
                 </div>
                 <ul>
+                    <li><a href="#" >ประเภทคดี</a></li> 
+                    <li><a href="#" >ชื่อศาล</a></li>
                     <li class="${currentPage === 'external-link.html' ? 'active' : ''}"><a href="external-link.html" >จัดการ External Link</a></li> 
                     <li class="${currentPage === 'external-type.html' ? 'active' : ''}"><a href="external-type.html" >ประเภท External Link</a></li>
-                    <li><a href="#" >ประเภทึคดี</a></li> 
-                    <li><a href="#" >ชื่อศาล</a></li>
                 </ul>
             </li>
         </ul>
